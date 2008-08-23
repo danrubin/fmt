@@ -1,0 +1,13 @@
+--- 
+applications/typogrify: 
+  local_branch: braid/svn/applications/typogrify
+  type: svn
+  revision: 
+  squash: true
+  remote: http://typogrify.googlecode.com/svn/trunk/typogrify
+applications/pagination: 
+  local_branch: braid/svn/applications/pagination
+  type: svn
+  revision: 
+  squash: true
+  remote: http://django-pagination.googlecode.com/svn/trunk/pagination
