@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from django.views.decorators.cache import cache_page
-from django.views.generic import list_detail
+from django.views.generic import list_detail, date_based
 from django.views.generic.simple import direct_to_template, redirect_to
 from django.contrib.sitemaps import GenericSitemap
 from django.contrib import admin
@@ -13,7 +13,7 @@ admin.autodiscover()
 
 # Querysets
 complaints = {
-    'queryset': Complaints.objects.all(),
+    'queryset': Complaint.objects.all(),
     'date_field': 'published',
     'template_object_name': 'complaint',
     'num_latest': 20,
@@ -22,7 +22,7 @@ complaints = {
 
 # Sitemaps
 sitemaps = {
-    'complaints': GenericSitemap(complaints_sitemap, priority=0.8),
+#    'complaints': GenericSitemap(complaints_sitemap, priority=0.8),
 }
 
 
