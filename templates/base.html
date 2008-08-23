@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="blue">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Fuck My Technology | Go ahead, vent your heart out (tm)</title>
+
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+</head>
+
+<body id="{% block body-id %}{% endblock %}">
+	<div id="wrapper">
+		<div id="header">
+			<h1 title="Fuck My Technology">fuck my technology</h1>
+		</div>
+		<div id="introduction">
+		{% block introduction %}{% endblock %}
+		</div>
+		
+		{% block content %}
+		{% endblock %}
+		
+		<div id="sidebar">
+			<h3 id="dashboardwidget">get the dashboard widget</h3>
+			<img class="promo" src="images/promo_dashboardwidget_comingsoon.png" width="204" height="74" alt="coming soon: dashboard widget" />
+			
+			<h3 id="textlinkads">sponsored links</h3>
+			<ul>
+				<li><a href="">&raquo; Link text here from text-ads</a></li>
+				<li><a href="">&raquo; Link text here from text-ads</a></li>
+				<li><a href="">&raquo; Link text here from text-ads</a></li>
+				<li><a href="">&raquo; Link text here from text-ads</a></li>
+				<li><a href="">&raquo; Link text here from text-ads</a></li>
+				<li><a href="">&raquo; Link text here from text-ads</a></li>
+				<li><a href="">&raquo; Link text here from text-ads</a></li>
+				<li><a href="">&raquo; Link text here from text-ads</a></li>
+			</ul>
+			
+			<h3 id="googleads">ads by google</h3>
+		</div>
+		
+		<div id="footer" class="clearfix">
+			<p>Imagined and brought to life by <a href="http://superfluousbanter.org/">SuperfluousBanter</a>. All rights reserved. Copy this site and I&rsquo;ll fuck *your* technology&hellip;</p>
+			<p id="feed"><a href="">Feed</a></p>
+		</div>
+	</div>
+</body>
+</html>

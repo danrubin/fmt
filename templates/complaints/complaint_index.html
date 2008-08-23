@@ -1,27 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% extends "base.html" %}
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="blue">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+{% block body-id %}archive{% endblock %}
 
-	<title>Fuck My Technology | Go ahead, vent your heart out (tm)</title>
-
-	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
-</head>
-
-<body>
-	<div id="wrapper">
-		<div id="header">
-			<h1 title="Fuck My Technology">fuck my technology</h1>
-		</div>
-		
-		<div id="introduction">
+{% block introduction %}
 			<p>You know those days when some piece of tech you own screws up your entire life? Maybe your cell phone drops a call, your car remote stops working, your PC (or Mac) decides you didn&rsquo;t need to save any of your email, or your GPS decides to really tell you where to go?</p>
-
 			<p>This site is for those days&mdash;instead of going postal, just tell us your current techno-item of choice, and what it did to you this time, and just like that, it&rsquo;ll be added to the Wall of Frustration. And trust us, reading about what technology is doing to other people can do wonders for your mood&hellip;</p>
-		</div>
-		
+{% endblock %}
+
+{% block content %}
 		<div id="tellushowyoufeel">
 			<h2>tell us how you feel...</h2>
 			<form action="index_submit" method="post">
@@ -73,30 +59,4 @@
 				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
 			</dl>
 		</div>
-		
-		<div id="sidebar">
-			<h3 id="dashboardwidget">get the dashboard widget</h3>
-			<img class="promo" src="images/promo_dashboardwidget_comingsoon.png" width="204" height="74" alt="coming soon: dashboard widget" />
-			
-			<h3 id="textlinkads">sponsored links</h3>
-			<ul>
-				<li><a href="">&raquo; Link text here from text-ads</a></li>
-				<li><a href="">&raquo; Link text here from text-ads</a></li>
-				<li><a href="">&raquo; Link text here from text-ads</a></li>
-				<li><a href="">&raquo; Link text here from text-ads</a></li>
-				<li><a href="">&raquo; Link text here from text-ads</a></li>
-				<li><a href="">&raquo; Link text here from text-ads</a></li>
-				<li><a href="">&raquo; Link text here from text-ads</a></li>
-				<li><a href="">&raquo; Link text here from text-ads</a></li>
-			</ul>
-			
-			<h3 id="googleads">ads by google</h3>
-		</div>
-		
-		<div id="footer" class="clearfix">
-			<p>Imagined and brought to life by <a href="http://superfluousbanter.org/">SuperfluousBanter</a>. All rights reserved. Copy this site and I&rsquo;ll fuck *your* technology&hellip;</p>
-			<p id="feed"><a href="">Feed</a></p>
-		</div>
-	</div>
-</body>
-</html>
+{% endblock %}
