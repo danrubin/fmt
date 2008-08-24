@@ -1,15 +1,15 @@
 /*
 -----------------------------------------------
 fuckmytechnology stylesheet
-edited: 2008-01-27
 author: Dan Rubin
+edited: 2008-08-24
 ----------------------------------------------- */
 
-html#blue {
+html.blue {
 	background:#003264 url(../images/bg_blue_body.png);
 }
 
-html#red {
+html.red {
 	background:#640000 url(../images/bg_red_body.png);
 }
 
@@ -24,10 +24,10 @@ body {
 	color:#fff;
 	text-shadow:0 0 0 #000;
 }
-html#blue body {
+html.blue body {
 	background-image:url(../images/bg_blue_header.png);
 }
-html#red body {
+html.red body {
 	background-image:url(../images/bg_red_header.png);
 }
 
@@ -56,14 +56,15 @@ img {
 
 /* header */
 #header {
+	position:relative;
 	border-width:0 0 1px;
 	border-style:solid;
 	margin-bottom:-7px;
 }
-html#blue #header {
+html.blue #header {
 	border-color:#003c79;
 }
-html#red #header {
+html.red #header {
 	border-color:#780100;
 }
 
@@ -73,12 +74,41 @@ h1 {
 	text-indent:-9999px;
 	background-repeat:no-repeat;
 }
-html#blue h1 {
-	background-image:url(../images/bg_blue_logo.png);
+html.blue h1 { background-image:url(../images/bg_blue_logo.png); }
+html.blue h1.safe { background-image:url(../images/bg_blue_logo_safe.png); }
+html.red h1 { background-image:url(../images/bg_red_logo.png); }
+html.red h1.safe { background-image:url(../images/bg_red_logo_safe.png); }
+
+
+/* toggle buttons */
+#colorswitch,
+#titleswitch {
+	position:absolute;
+	height:24px;
+	background-repeat:no-repeat;
+	background-color:transparent;
+	border:none;
+	text-indent:-9999px;
 }
-html#red h1 {
-	background-image:url(../images/bg_red_logo.png);
+#colorswitch {
+	right:0;
+	bottom:43px;
 }
+#titleswitch {
+	right:0;
+	bottom:17px;
+}
+#colorswitch:hover,
+#titleswitch:hover { background-position:0 -24px; }
+
+html.blue #colorswitch { width:105px;background-image:url(../images/bg_blue_colorswitch.png); }
+html.red #colorswitch { width:105px;background-image:url(../images/bg_red_colorswitch.png); }
+html.blue #titleswitch { width:128px;background-image:url(../images/bg_blue_titleswitch_adult.png); }
+html.red #titleswitch { width:128px;background-image:url(../images/bg_red_titleswitch_adult.png); }
+html.blue #titleswitch.safe { width:140px;background-image:url(../images/bg_blue_titleswitch_safe.png); }
+html.red #titleswitch.safe { width:140px;background-image:url(../images/bg_red_titleswitch_safe.png); }
+
+
 
 /* set width for left column divs */
 #introduction,
@@ -91,10 +121,10 @@ html#red h1 {
 	border-width:0 0 4px;
 	border-style:solid;
 }
-html#blue #introduction {
+html.blue #introduction {
 	border-color:#003b78;
 }
-html#red #introduction {
+html.red #introduction {
 	border-color:#780100;
 }
 
@@ -114,41 +144,41 @@ h2, h3, h4 {
 #walloffrustration h2 {
 	margin-bottom:10px;
 }
-html#blue h2 {
+html.blue h2 {
 	border-color:#003b78;
 }
-html#red h2 {
+html.red h2 {
 	border-color:#780100;
 }
-html#blue #tellushowyoufeel h2 {
+html.blue #tellushowyoufeel h2 {
 	background-image:url(../images/hdr_blue_tellushowyoufeel.png);
 }
-html#red #tellushowyoufeel h2 {
+html.red #tellushowyoufeel h2 {
 	background-image:url(../images/hdr_red_tellushowyoufeel.png);
 }
 
-html#blue #walloffrustration h2 {
+html.blue #walloffrustration h2 {
 	background-image:url(../images/hdr_blue_walloffrustration.png);
 }
-html#blue body#archive #walloffrustration h2 {
+html.blue body#archive #walloffrustration h2 {
 	background-image:url(../images/hdr_blue_walloffrustration_archive.png);
 }
-html#red #walloffrustration h2 {
+html.red #walloffrustration h2 {
 	background-image:url(../images/hdr_red_walloffrustration.png);
 }
-html#red body#archive #walloffrustration h2 {
+html.red body#archive #walloffrustration h2 {
 	background-image:url(../images/hdr_red_walloffrustration_archive.png);
 }
 
 #tellushowyoufeel form {
 	margin:10px 0 0;
-	padding:10px 0 4px 9px;
+	padding:10px 0 10px 9px;
 	background-repeat:no-repeat;
 }
-html#blue #tellushowyoufeel form {
+html.blue #tellushowyoufeel form {
 	background:#002a58 url(../images/bg_blue_form.png);
 }
-html#red #tellushowyoufeel form {
+html.red #tellushowyoufeel form {
 	background:#580200 url(../images/bg_red_form.png);
 }
 
@@ -183,22 +213,22 @@ html#red #tellushowyoufeel form {
 	margin-top:15px;
 }
 
-html#blue #tellushowyoufeel label.complaint {
+html.blue #tellushowyoufeel label.complaint {
 	background-image:url(../images/hdr_blue_complaint.png);
 }
-html#red #tellushowyoufeel label.complaint {
+html.red #tellushowyoufeel label.complaint {
 	background-image:url(../images/hdr_red_complaint.png);
 }
-html#blue #tellushowyoufeel label.technology {
+html.blue #tellushowyoufeel label.technology {
 	background-image:url(../images/hdr_blue_technology.png);
 }
-html#red #tellushowyoufeel label.technology {
+html.red #tellushowyoufeel label.technology {
 	background-image:url(../images/hdr_red_technology.png);
 }
-html#blue #tellushowyoufeel label.yourname {
+html.blue #tellushowyoufeel label.yourname {
 	background-image:url(../images/hdr_blue_yourname.png);
 }
-html#red #tellushowyoufeel label.yourname {
+html.red #tellushowyoufeel label.yourname {
 	background-image:url(../images/hdr_red_yourname.png);
 }
 
@@ -209,10 +239,10 @@ html#red #tellushowyoufeel label.yourname {
 	background-color:#fff;
 	padding:1px;
 }
-html#blue #tellushowyoufeel table td span {
+html.blue #tellushowyoufeel table td span {
 	border-color:#001c3a;
 }
-html#red #tellushowyoufeel table td span {
+html.red #tellushowyoufeel table td span {
 	border-color:#3a0100;
 }
 
@@ -227,16 +257,14 @@ html#red #tellushowyoufeel table td span {
 	font-family:"lucida grande",sans-serif;
 	color:#333;
 }
-html#blue #tellushowyoufeel textarea {
+html.blue #tellushowyoufeel textarea {
 	background-color:#c9dbee;
 }
-html#red #tellushowyoufeel textarea {
+html.red #tellushowyoufeel textarea {
 	background-color:#eecac9;
 }
 
-#tellushowyoufeel input.text,
-#tellushowyoufeel #id_technology,
-#tellushowyoufeel #id_name {
+#tellushowyoufeel input.text {
 	border:none;
 	margin:0;
 	padding:5px 0;
@@ -245,14 +273,10 @@ html#red #tellushowyoufeel textarea {
 	font-size:16px;
 	color:#333;
 }
-html#blue #tellushowyoufeel input.text,
-html#blue #tellushowyoufeel #id_technology,
-html#blue #tellushowyoufeel #id_name {
+html.blue #tellushowyoufeel input.text {
 	background-color:#c9dbee;
 }
-html#red #tellushowyoufeel input.text,
-html#red #tellushowyoufeel #id_technology,
-html#red #tellushowyoufeel #id_name {
+html.red #tellushowyoufeel input.text {
 	background-color:#eecac9;
 }
 
@@ -263,16 +287,24 @@ html#red #tellushowyoufeel #id_name {
 	line-height:14px;
 	padding-right:10px;
 }
-html#blue #tellushowyoufeel .note {
+html.blue #tellushowyoufeel .note {
 	color:#185598;
 }
-html#red #tellushowyoufeel .note {
+html.red #tellushowyoufeel .note {
 	color:#981b18;
 }
 
-#tellushowyoufeel input#submit {
-	margin:8px 0 0;
+#tellushowyoufeel button#submit {
+	width:220px;
+	height:27px;
+	margin:6px 0 0;
+	background-repeat:no-repeat;
+	background-color:transparent;
+	border:none;
+	text-indent:-9999px;
 }
+html.blue #tellushowyoufeel button#submit { background-image:url(../images/button_blue_submit.png); }
+html.red #tellushowyoufeel button#submit { background-image:url(../images/button_red_submit.png); }
 
 #walloffrustration dl {
 	margin:0;
@@ -280,18 +312,18 @@ html#red #tellushowyoufeel .note {
 	border-width:0 0 1px;
 	border-style:solid;
 }
-html#blue #walloffrustration dl {
+html.blue #walloffrustration dl {
 	background:#002e5e url(../images/bg_blue_comment.png);
 	border-color:#00376f;
 }
-html#blue #walloffrustration dl.alt {
+html.blue #walloffrustration dl.alt {
 	background:#002a58 url(../images/bg_blue_comment_alt.png);
 }
-html#red #walloffrustration dl {
+html.red #walloffrustration dl {
 	background:#5e0100 url(../images/bg_red_comment.png);
 	border-color:#6f0100;
 }
-html#red #walloffrustration dl.alt {
+html.red #walloffrustration dl.alt {
 	background:#580200 url(../images/bg_red_comment_alt.png);
 }
 
@@ -299,10 +331,10 @@ html#red #walloffrustration dl.alt {
 	font-family:"lucida grande",sans-serif;
 	font-size:10px;
 }
-html#blue #walloffrustration dt {
+html.blue #walloffrustration dt {
 	color:#3d83c8;
 }
-html#red #walloffrustration dt {
+html.red #walloffrustration dt {
 	color:#c83d3d;
 }
 #walloffrustration dd {
@@ -311,10 +343,10 @@ html#red #walloffrustration dt {
 	font-style:italic;
 	background-repeat:no-repeat;
 }
-html#blue #walloffrustration dd {
+html.blue #walloffrustration dd {
 	background-image:url(../images/bg_blue_quote_open.png);
 }
-html#red #walloffrustration dd {
+html.red #walloffrustration dd {
 	background-image:url(../images/bg_red_quote_open.png);
 }
 
@@ -324,10 +356,10 @@ html#red #walloffrustration dd {
 	background-repeat:no-repeat;
 	background-position:right bottom;
 }
-html#blue #walloffrustration dd p {
+html.blue #walloffrustration dd p {
 	background-image:url(../images/bg_blue_quote_close.png);
 }
-html#red #walloffrustration dd p {
+html.red #walloffrustration dd p {
 	background-image:url(../images/bg_red_quote_close.png);
 }
 
@@ -338,8 +370,8 @@ html#red #walloffrustration dd p {
 	width:208px;
 	padding:10px 11px 10px;
 }
-html#blue #sidebar { background-color:#003870; }
-html#red #sidebar { background-color:#700000; }
+html.blue #sidebar { background-color:#003870; }
+html.red #sidebar { background-color:#700000; }
 
 #sidebar h3 {
 	text-indent:-9999px;
@@ -349,24 +381,24 @@ html#red #sidebar { background-color:#700000; }
 #sidebar #dashboardwidget {
 	margin-top:0;
 }
-html#blue #dashboardwidget {
+html.blue #dashboardwidget {
 	background-image:url(../images/hdr_blue_dashboardwidget.png);
 }
-html#red #dashboardwidget {
+html.red #dashboardwidget {
 	background-image:url(../images/hdr_red_dashboardwidget.png);
 }
 
-html#blue #textlinkads {
+html.blue #textlinkads {
 	background-image:url(../images/hdr_blue_textlinkads.png);
 }
-html#red #textlinkads {
+html.red #textlinkads {
 	background-image:url(../images/hdr_red_textlinkads.png);
 }
 
-html#blue #googleads {
+html.blue #googleads {
 	background-image:url(../images/hdr_blue_googleads.png);
 }
-html#red #googleads {
+html.red #googleads {
 	background-image:url(../images/hdr_red_googleads.png);
 }
 
@@ -375,10 +407,10 @@ html#red #googleads {
 	border-style:solid;
 	padding:1px;
 }
-html#blue #sidebar .promo {
+html.blue #sidebar .promo {
 	color:#004685;
 }
-html#red #sidebar .promo {
+html.red #sidebar .promo {
 	color:#850003;
 }
 
@@ -389,10 +421,10 @@ html#red #sidebar .promo {
 	border-width:1px 0 0;
 	border-style:solid;
 }
-html#blue #sidebar ul {
+html.blue #sidebar ul {
 	border-color:#004685;
 }
-html#red #sidebar ul {
+html.red #sidebar ul {
 	border-color:#850003;
 }
 #sidebar li {
@@ -406,18 +438,18 @@ html#red #sidebar ul {
 	border-style:solid;
 	text-decoration:none;
 }
-html#blue #sidebar li a {
+html.blue #sidebar li a {
 	color:#3a8bdc;
 	border-color:#004685;
 }
-html#blue #sidebar li a:hover {
+html.blue #sidebar li a:hover {
 	background-color:#003b75;
 }
-html#red #sidebar li a {
+html.red #sidebar li a {
 	color:#dc3a3a;
 	border-color:#850003;
 }
-html#red #sidebar li a:hover {
+html.red #sidebar li a:hover {
 	background-color:#760000;
 }
 
@@ -429,10 +461,10 @@ html#red #sidebar li a:hover {
 	border-width:1px 0 0;
 	border-style:solid;
 }
-html#blue #footer {
+html.blue #footer {
 	border-color:#003b78;
 }
-html#red #footer {
+html.red #footer {
 	border-color:#780100;
 }
 
@@ -456,11 +488,11 @@ html#red #footer {
 	color:#fff !important;
 }
 
-html#blue #footer p,
-html#blue #footer a {
+html.blue #footer p,
+html.blue #footer a {
 	color:#0d57a0;
 }
-html#red #footer p,
-html#red #footer a {
+html.red #footer p,
+html.red #footer a {
 	color:#a00d0d;
 }
