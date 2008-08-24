@@ -1,19 +1,37 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="blue">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="blue">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title>Fuck My Technology | Go ahead, vent your heart out (tm)</title>
 
 	<link rel="stylesheet" href="{{ MEDIA_URL }}/stylesheets/styles.css" type="text/css" media="screen" />
+	<script src="{{ MEDIA_URL }}/javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+    $(function(){
+        $("#colorswitch").click(function(event){
+          event.preventDefault();
+          $("html").toggleClass("blue").toggleClass("red");
+        });
+        
+        $("#titleswitch").click(function(event){
+          event.preventDefault();
+          $("html body h1").toggleClass("safe");
+          $("#titleswitch").toggleClass("safe");
+        });
+    });
+    </script>
 </head>
 
 <body id="{% block body-id %}{% endblock %}">
 	<div id="wrapper">
 		<div id="header">
-			<h1 title="Fuck My Technology">fuck my technology</h1>
+			<h1 title="Fuck My Technology" class="safe">fuck my technology</h1>
+			
+			<button id="colorswitch">toggle colors</button>
+			<button id="titleswitch" class="safe">toggle title</button>
 		</div>
 		<div id="introduction">
 		{% block introduction %}{% endblock %}
