@@ -27,3 +27,6 @@ class Complaint(models.Model):
         })
     
 
+# Initialization
+from complaints import register
+del register

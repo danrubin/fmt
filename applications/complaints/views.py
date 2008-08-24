@@ -27,6 +27,7 @@ def index(request):
         form = ComplaintForm(request.POST)
         if form.is_valid():
             form.save()
+            request.notifications.create = ('Your complaint has been added.')
     else:
         form = ComplaintForm()
     

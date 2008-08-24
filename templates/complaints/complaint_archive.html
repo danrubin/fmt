@@ -35,6 +35,12 @@
 			</form>
 		</div>
 		
+		{% if notifications %}
+			{% for notification in notifications %}
+				{{ notification.type }}{{ notification.content }}
+			{% endfor %}
+		{% endif %}
+		
 		<div id="walloffrustration">
 			<h2>wall of frustration</h2>
 			{% for complaint in latest %}

@@ -36,6 +36,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.http.ConditionalGetMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'pagination.middleware.PaginationMiddleware',
+    'complaints.notifications.Notification',
 )
 USE_ETAGS = True
 APPEND_SLASH = True
@@ -49,6 +50,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
     'django.core.context_processors.request',
+    'complaints.notifications.notifications',
 )
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, 'templates'),
