@@ -234,7 +234,9 @@ html#red #tellushowyoufeel textarea {
 	background-color:#eecac9;
 }
 
-#tellushowyoufeel input.text {
+#tellushowyoufeel input.text,
+#tellushowyoufeel #id_technology,
+#tellushowyoufeel #id_name {
 	border:none;
 	margin:0;
 	padding:5px 0;
@@ -243,10 +245,14 @@ html#red #tellushowyoufeel textarea {
 	font-size:16px;
 	color:#333;
 }
-html#blue #tellushowyoufeel input.text {
+html#blue #tellushowyoufeel input.text,
+html#blue #tellushowyoufeel #id_technology,
+html#blue #tellushowyoufeel #id_name {
 	background-color:#c9dbee;
 }
-html#red #tellushowyoufeel input.text {
+html#red #tellushowyoufeel input.text,
+html#red #tellushowyoufeel #id_technology,
+html#red #tellushowyoufeel #id_name {
 	background-color:#eecac9;
 }
 
