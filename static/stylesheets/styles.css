@@ -103,10 +103,10 @@ html.red h1.safe { background-image:url(../images/bg_red_logo_safe.png); }
 
 html.blue #colorswitch { width:105px;background-image:url(../images/bg_blue_colorswitch.png); }
 html.red #colorswitch { width:105px;background-image:url(../images/bg_red_colorswitch.png); }
-html.blue #titleswitch { width:128px;background-image:url(../images/bg_blue_titleswitch_adult.png); }
-html.red #titleswitch { width:128px;background-image:url(../images/bg_red_titleswitch_adult.png); }
-html.blue #titleswitch.safe { width:140px;background-image:url(../images/bg_blue_titleswitch_safe.png); }
-html.red #titleswitch.safe { width:140px;background-image:url(../images/bg_red_titleswitch_safe.png); }
+html.blue #titleswitch { width:140px;background-image:url(../images/bg_blue_titleswitch_safe.png); }
+html.red #titleswitch { width:140px;background-image:url(../images/bg_red_titleswitch_safe.png); }
+html.blue #titleswitch.safe { width:128px;background-image:url(../images/bg_blue_titleswitch_adult.png); }
+html.red #titleswitch.safe { width:128px;background-image:url(../images/bg_red_titleswitch_adult.png); }
 
 
 
