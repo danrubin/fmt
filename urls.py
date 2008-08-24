@@ -6,6 +6,7 @@ from django.contrib.sitemaps import GenericSitemap
 from django.contrib import admin
 
 from complaints.models import Complaint
+from complaints.views import index
 
 
 # Auto-discover `admin.py`
@@ -32,13 +33,17 @@ urlpatterns = patterns('',
     # Complaints
     url(
         regex   = '^archive/$',
-        view    = date_based.archive_index,
+        view    = list_detail.object_list,
         kwargs  = complaints,
         name    = 'archive-index',
     ),
     
     # Homepage
-    url(r'^$', direct_to_template, { 'template': 'home.html' }, name='site-home'),
+    url(
+        regex   = '^$',
+        view    = index,
+        name    = 'site-home'
+    ),
     
     # Sitemaps
     (r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
