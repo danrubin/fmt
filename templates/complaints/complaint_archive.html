@@ -8,19 +8,19 @@
 {% block content %}
 		<div id="tellushowyoufeel">
 			<h2>tell us how you feel...</h2>
-			<form action="index_submit" method="post">
+			<form action="" method="post">
 				<table>
 					<tr>
 						<td class="column1">
 							<label for="complaint" class="complaint">Enter your complaint</label>
-							<span><textarea id="complaint"></textarea></span>
+							<span>{{ form.complaint }}</span>
 						</td>
 						<td class="column2">
 							<label for="technology" class="technology">The technology in question</label>
-							<span><input type="text" id="technology" class="text" /></span>
+							<span>{{ form.technology }}</span>
 							
 							<label for="yourname" class="yourname">Your name (optional)</label>
-							<span><input type="text" id="yourname" class="text" /></span>
+							<span>{{ form.name }}</span>
 						</td>
 					<tr>
 					<tr>
@@ -38,7 +38,7 @@
 		<div id="walloffrustration">
 			<h2>wall of frustration</h2>
 			{% for complaint in latest %}
-			<dl>
+			<dl class="{% cycle '' 'alt' %}">
 				<dt>On {{ complaint.published|date:"F jS, Y"}} <strong>{% if complaint.name %}{{ complaint.name }}{% else %}Anonymous{% endif %}</strong> posted this about their <strong>{{ complaint.technology }}</strong>:</dt>
 				<dd><p>{{ complaint.complaint }}</p></dd>
 			</dl>			
