@@ -27,13 +27,17 @@ def index(request):
         form = ComplaintForm(request.POST)
         if form.is_valid():
             form.save()
+    else:
+        form = ComplaintForm()
     
     return date_based.archive_index(
-        queryset=complaint,
+        request,
+        queryset=complaints,
         date_field='published',
         template_name='complaints/complaint_archive.html',
         allow_empty=True,
         extra_context={
             'form': form,
+            'total_complaints': len(complaints)
         }
     )
