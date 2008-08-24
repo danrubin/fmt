@@ -10,64 +10,11 @@
 {% block content %}
 		<div id="walloffrustration">
 			<h2>wall of frustration (archive)</h2>
-			<dl>
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl class="alt">
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl>
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl class="alt">
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl>
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl class="alt">
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl>
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl class="alt">
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl>
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl class="alt">
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl>
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
-			
-			<dl class="alt">
-				<dt>On April 21st, 2007, <strong>Anonymous</strong> posted this about their <strong>Treo650</strong>:</dt>
-				<dd><p>My damn phone restarted *again*!!! arrrrgggggghhhhh!!</p></dd>
-			</dl>
+			{% for complaint in complaint_list %}
+			<dl class="{% cycle '', 'alt' %}">
+				<dt>On {{ complaint.published|date:"F jS, Y"}} <strong>{% if complaint.name %}{{ complaint.name }}{% else %}Anonymous{% endif %}</strong> posted this about their <strong>{{ complaint.technology }}</strong>:</dt>
+				<dd><p>{{ complaint.complaint }}</p></dd>
+			</dl>			
+			{% endfor %}
 		</div>
 {% endblock %}

@@ -15,9 +15,7 @@ admin.autodiscover()
 # Querysets
 complaints = {
     'queryset': Complaint.objects.all(),
-    'date_field': 'published',
     'template_object_name': 'complaint',
-    'num_latest': 20,
 }
 
 
