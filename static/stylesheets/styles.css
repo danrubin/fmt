@@ -2,7 +2,7 @@
 -----------------------------------------------
 fuckmytechnology stylesheet
 author: Dan Rubin
-edited: 2008-08-24
+edited: 2008-08-25
 ----------------------------------------------- */
 
 html.blue {
@@ -264,9 +264,7 @@ html.red #tellushowyoufeel textarea {
 	background-color:#eecac9;
 }
 
-#tellushowyoufeel input.text,
-#tellushowyoufeel #id_name,
-#tellushowyoufeel #id_technology {
+#tellushowyoufeel input.text {
 	border:none;
 	margin:0;
 	padding:5px 0;
@@ -275,14 +273,10 @@ html.red #tellushowyoufeel textarea {
 	font-size:16px;
 	color:#333;
 }
-html.blue #tellushowyoufeel input.text,
-html.blue #tellushowyoufeel #id_name,
-html.blue #tellushowyoufeel #id_technology {
+html.blue #tellushowyoufeel input.text {
 	background-color:#c9dbee;
 }
-html.red #tellushowyoufeel input.text,
-html.red #tellushowyoufeel #id_name,
-html.red #tellushowyoufeel #id_technology {
+html.red #tellushowyoufeel input.text {
 	background-color:#eecac9;
 }
 
@@ -308,7 +302,10 @@ html.red #tellushowyoufeel .note {
 	background-color:transparent;
 	border:none;
 	text-indent:-9999px;
+	cursor:pointer;
 }
+#tellushowyoufeel button#submit:hover { background-position:0 -27px; }
+#tellushowyoufeel button#submit:active { background-position:0 -54px; }
 html.blue #tellushowyoufeel button#submit { background-image:url(../images/button_blue_submit.png); }
 html.red #tellushowyoufeel button#submit { background-image:url(../images/button_red_submit.png); }
 
