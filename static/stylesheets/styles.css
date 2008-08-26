@@ -411,6 +411,21 @@ html.red #googleads {
 	background-image:url(../images/hdr_red_googleads.png);
 }
 
+html.blue #about {
+	background-image:url(../images/hdr_blue_about.png);
+}
+html.red #about {
+	background-image:url(../images/hdr_red_about.png);
+}
+
+html.blue #referrals {
+	background-image:url(../images/hdr_blue_referrals.png);
+}
+html.red #referrals {
+	background-image:url(../images/hdr_red_referrals.png);
+}
+
+
 #sidebar .promo {
 	border-width:1px;
 	border-style:solid;
