@@ -387,9 +387,17 @@ html.red #sidebar { background-color:#700000; }
 	height:9px;
 	margin:20px 0 5px;
 }
-#sidebar #dashboardwidget {
+#sidebar h3.first {
 	margin-top:0;
 }
+#sidebar p {
+    font-size:13px;
+    line-height:1.4em;
+}
+#sidebar h3+p {
+    margin-top:0;
+}
+
 html.blue #dashboardwidget {
 	background-image:url(../images/hdr_blue_dashboardwidget.png);
 }
