@@ -12,7 +12,7 @@
 			<h2>wall of frustration (archive)</h2>
 			{% for complaint in complaint_list %}
 			<dl class="{% cycle '' 'alt' %}">
-				<dt>On {{ complaint.published|date:"F jS, Y"}} <strong>{% if complaint.name %}{{ complaint.name }}{% else %}Anonymous{% endif %}</strong> posted this about their <strong>{{ complaint.technology }}</strong>:</dt>
+				<dt>On {{ complaint.published|date:"F jS, Y"}} <strong>{% if complaint.name %}{{ complaint.name }}{% else %}Anonymous{% endif %}</strong> posted this about <strong>{{ complaint.technology }}</strong>:</dt>
 				<dd><p>{{ complaint.complaint }}</p></dd>
 			</dl>			
 			{% endfor %}
