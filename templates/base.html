@@ -12,15 +12,57 @@
 	<script src="{{ MEDIA_URL }}/javascripts/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
     $(function(){
+        // set variables if the cookies exist
+        var fmtColor = $.cookie('fmtColor');
+        var fmtTitle = $.cookie('fmtTitle');
+        
+        // then set classes based on the values
+        if(fmtColor=='blue'){
+            $("html").attr("class", "blue");
+        }else if(fmtColor=='red'){
+            $("html").attr("class", "red");
+        };
+        
+        if(fmtTitle=='adult'){
+            $("html body h1").removeAttr("class");
+            $("#titleswitch").removeAttr("class");
+        }else if(fmtTitle=='safe'){
+            $("html body h1").attr("class", "safe");
+            $("#titleswitch").attr("class", "safe");
+        };
+        
+        // functions
         $("#colorswitch").click(function(event){
-          event.preventDefault();
-          $("html").toggleClass("blue").toggleClass("red");
+            event.preventDefault();
+            $("html").toggleClass("blue").toggleClass("red");
+
+            var currentColor = $("html").attr("class");
+
+            // check the current state of the toggled class, then set a cookie
+            if(currentColor=='red'){
+                $.cookie('fmtColor', 'red');
+                return false;
+            }else if(currentColor=='blue'){
+                $.cookie('fmtColor', 'blue');
+                return false;
+            };
         });
         
         $("#titleswitch").click(function(event){
           event.preventDefault();
           $("html body h1").toggleClass("safe");
           $("#titleswitch").toggleClass("safe");
+          
+          var currentTitle = $("html body h1").attr("class");
+
+          // check the current state of the toggled class, then set a cookie
+          if(currentTitle=='safe'){
+              $.cookie('fmtTitle', 'safe');
+              return false;
+          }else if(currentTitle==''){
+              $.cookie('fmtTitle', 'adult');
+              return false;
+          };
         });
     });
     </script>
