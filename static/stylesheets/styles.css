@@ -89,6 +89,7 @@ html.red h1.safe { background-image:url(../images/bg_red_logo_safe.png); }
 	background-color:transparent;
 	border:none;
 	text-indent:-9999px;
+	cursor:pointer;
 }
 #colorswitch {
 	right:0;
