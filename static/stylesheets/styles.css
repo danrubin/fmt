@@ -2,7 +2,7 @@
 -----------------------------------------------
 fuckmytechnology stylesheet
 author: Dan Rubin
-edited: 2008-08-26
+edited: 2008-08-29
 ----------------------------------------------- */
 
 html.blue {
@@ -122,12 +122,30 @@ html.red #titleswitch.safe { width:128px;background-image:url(../images/bg_red_t
 	border-width:0 0 4px;
 	border-style:solid;
 }
+#introduction a {
+	padding-bottom:1px;
+	color:#fff;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	font-style:italic;
+	text-decoration:none;
+}
+html body #introduction a:hover {
+	border-color:#fff;
+}
 html.blue #introduction {
 	border-color:#003b78;
+}
+html.blue #introduction a {
+	border-color:#2e6095;
 }
 html.red #introduction {
 	border-color:#780100;
 }
+html.red #introduction a {
+	border-color:#952f2e;
+}
+
 
 h2, h3, h4 {
 	background-repeat:no-repeat;
@@ -372,6 +390,32 @@ html.blue #walloffrustration dd p {
 html.red #walloffrustration dd p {
 	background-image:url(../images/bg_red_quote_close.png);
 }
+
+
+#archivelink {
+	margin-top:.7em;
+	font-style:italic;
+	text-align:right;
+}
+#archivelink a {
+	padding-bottom:1px;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	text-decoration:none;
+}
+html body #archivelink a:hover {
+	border-color:#fff;
+	color:#fff;
+}
+html.blue #archivelink a {
+	border-color:#00468c;
+	color:#005fbe;
+}
+html.red #archivelink a {
+	border-color:#8c0002;
+	color:#be0003;
+}
+
 
 #sidebar {
 	position:absolute;
