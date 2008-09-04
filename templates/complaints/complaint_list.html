@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block content %}
+        {% autopaginate complaint_list 25 %}
 		<div id="walloffrustration">
 			<h2>wall of frustration (archive)</h2>
 			{% for complaint in complaint_list %}
@@ -18,4 +19,5 @@
 			{% endfor %}
 			<p id="archivelink"><a href="/archive/">Archive of Frustration &raquo;</a></p>
 		</div>
+		{% paginate %}
 {% endblock %}

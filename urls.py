@@ -2,15 +2,18 @@ from django.conf.urls.defaults import *
 from django.views.decorators.cache import cache_page
 from django.views.generic import list_detail, date_based
 from django.views.generic.simple import direct_to_template, redirect_to
-from django.contrib.sitemaps import GenericSitemap
 from django.contrib import admin
+from django.contrib.sitemaps import GenericSitemap
+from django.contrib.syndication.views import feed
 
+from complaints.feeds import LatestComplaints
 from complaints.models import Complaint
 from complaints.views import index
 
 
 # Auto-discover `admin.py`
 admin.autodiscover()
+
 
 # Querysets
 complaints = {
@@ -19,9 +22,15 @@ complaints = {
 }
 
 
+# Feeds
+feeds = {
+  'complaints': LatestComplaints,
+}
+
+
 # Sitemaps
 sitemaps = {
-#    'complaints': GenericSitemap(complaints_sitemap, priority=0.8),
+    'complaints': GenericSitemap(complaints_sitemap, priority=0.8),
 }
 
 
@@ -41,6 +50,14 @@ urlpatterns = patterns('',
         regex   = '^$',
         view    = index,
         name    = 'site-home'
+    ),
+    
+    # Feeds
+    url(
+        regex   = '^feeds/(?P<url>.*)/$',
+        view    = feed,
+        kwargs  = { 'feed_dict': feeds, },
+        name    = 'complaints-feed',
     ),
     
     # Sitemaps
