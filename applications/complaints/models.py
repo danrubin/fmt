@@ -17,15 +17,6 @@ class Complaint(models.Model):
     def __unicode__(self):
         return "%s - %s" % (self.name, self.complaint)
     
-    @permalink
-    def get_absolute_url(self):
-        return ('complaint-detail', (), {
-            'year'  : self.published.year, 
-            'month' : self.published.strftime('%b').lower(), 
-            'day'   : self.published.day, 
-            'id'    : self.id
-        })
-    
 
 # Initialization
 from complaints import register
