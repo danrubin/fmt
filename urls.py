@@ -30,7 +30,7 @@ feeds = {
 
 # Sitemaps
 sitemaps = {
-    'complaints': GenericSitemap(complaints_sitemap, priority=0.8),
+    'complaints': GenericSitemap(complaints, priority=0.8),
 }
 
 
