@@ -23,7 +23,4 @@ class LatestComplaints(Feed):
     def items(self):
         return Complaint.objects.all()[:50]
     
-    def item_pubdate(self, item):
-        return item.published
-    
 
