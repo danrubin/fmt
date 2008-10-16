@@ -11,7 +11,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # Basic Settings
-TIME_ZONE = 'America/Los_Angeles'
+TIME_ZONE = 'America/Miami'
 LANGUAGE_CODE = 'en-us'
 
 # Cache Settings
@@ -20,11 +20,11 @@ if DEBUG:
 else:
     CACHE_BACKEND = "memcached://208.78.98.196:11211/"
     CACHE_MIDDLEWARE_SECONDS = 60 * 60
-    CACHE_MIDDLEWARE_KEY_PREFIX = 'aliter'
+    CACHE_MIDDLEWARE_KEY_PREFIX = 'fmt'
 
 # Site Settings
 SITE_ID = 1
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'fmt.urls'
 USE_I18N = True
 
 # Middleware

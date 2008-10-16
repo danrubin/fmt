@@ -11,7 +11,7 @@
 	<script src="{{ MEDIA_URL }}/javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
 	<script src="{{ MEDIA_URL }}/javascripts/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-    $(function(){
+    $(document).ready(function(){
         // set variables if the cookies exist
         var fmtColor = $.cookie('fmtColor');
         var fmtTitle = $.cookie('fmtTitle');
@@ -64,6 +64,9 @@
               return false;
           };
         });
+        
+        // bind form using ajaxForm 
+        $('#complain').ajaxForm( { beforeSubmit: validate } );
     });
     </script>
     <link rel="stylesheet" href="{{ MEDIA_URL }}/stylesheets/styles.css" type="text/css" media="screen" />
