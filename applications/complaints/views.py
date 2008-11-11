@@ -34,7 +34,7 @@ def index(request):
         request,
         queryset=complaints,
         date_field='published',
-        template_name='complaints/complaint_archive.html',
+        template_name='complaints/complaint_index.html',
         allow_empty=True,
         extra_context={
             'form': form,
